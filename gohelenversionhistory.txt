@@ -1,0 +1,359 @@
+OS History
+
+Version 2.4.209 (3)
+Activity	User	Date
+Ready for Distribution	abbas_atout@icloud.com	Aug 5, 2026 at 10:55 AM
+Pending Developer Release	Apple	Jul 31, 2026 at 10:11 AM
+In Review	Apple	Jul 31, 2026 at 7:40 AM
+Waiting for Review	abbas_atout@icloud.com	Jul 31, 2026 at 4:17 AM
+Ready for Review	abbas_atout@icloud.com	Jul 31, 2026 at 4:17 AM
+Prepare for Submission	abbas_atout@icloud.com	Jul 31, 2026 at 4:12 AM
+
+Version 2.4.142 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Jun 1, 2026 at 9:49 AM
+In Review	Apple	Jun 1, 2026 at 7:38 AM
+Waiting for Review	dan@otherme.world	Jun 1, 2026 at 4:42 AM
+Ready for Review	dan@otherme.world	Jun 1, 2026 at 4:42 AM
+Prepare for Submission	dan@otherme.world	Jun 1, 2026 at 4:40 AM
+
+Version 2.4.056 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 25, 2026 at 8:42 PM
+In Review	Apple	Feb 25, 2026 at 4:01 PM
+Waiting for Review	dan@otherme.world	Feb 25, 2026 at 3:33 PM
+Ready for Review	dan@otherme.world	Feb 25, 2026 at 3:33 PM
+Prepare for Submission	abbas_atout@icloud.com	Feb 25, 2026 at 3:28 PM
+
+Version 2.4.050 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 24, 2026 at 5:22 AM
+In Review	Apple	Feb 24, 2026 at 3:58 AM
+Waiting for Review	dan@otherme.world	Feb 24, 2026 at 3:44 AM
+Ready for Review	dan@otherme.world	Feb 24, 2026 at 3:44 AM
+Prepare for Submission	abbas_atout@icloud.com	Feb 24, 2026 at 3:34 AM
+
+Version 2.4.021 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Jan 22, 2026 at 5:27 AM
+In Review	Apple	Jan 22, 2026 at 5:18 AM
+Waiting for Review	dan@otherme.world	Jan 22, 2026 at 4:53 AM
+Ready for Review	dan@otherme.world	Jan 22, 2026 at 4:53 AM
+Prepare for Submission	abbas_atout@icloud.com	Jan 22, 2026 at 4:49 AM
+
+Version 2.3.260 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Sep 30, 2025 at 3:15 AM
+In Review	Apple	Sep 30, 2025 at 3:05 AM
+Waiting for Review	dan@otherme.world	Sep 30, 2025 at 2:18 AM
+Ready for Review	dan@otherme.world	Sep 30, 2025 at 2:18 AM
+Prepare for Submission	dan@otherme.world	Sep 30, 2025 at 2:16 AM
+
+Version 2.3.225 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Aug 13, 2025 at 10:12 AM
+In Review	Apple	Aug 13, 2025 at 9:40 AM
+Waiting for Review	dan@otherme.world	Aug 13, 2025 at 9:18 AM
+Ready for Review	dan@otherme.world	Aug 13, 2025 at 9:17 AM
+Prepare for Submission	abbas_atout@icloud.com	Aug 13, 2025 at 8:13 AM
+
+Version 2.3.202 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Jul 23, 2025 at 4:24 AM
+In Review	Apple	Jul 23, 2025 at 4:15 AM
+Waiting for Review	dan@otherme.world	Jul 23, 2025 at 3:46 AM
+Ready for Review	dan@otherme.world	Jul 23, 2025 at 3:46 AM
+Prepare for Submission	abbas_atout@icloud.com	Jul 23, 2025 at 3:43 AM
+
+Version 2.3.189 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Jul 9, 2025 at 3:38 AM
+In Review	Apple	Jul 9, 2025 at 3:18 AM
+Waiting for Review	dan@otherme.world	Jul 9, 2025 at 2:49 AM
+Ready for Review	dan@otherme.world	Jul 9, 2025 at 2:49 AM
+Prepare for Submission	abbas_atout@icloud.com	Jul 9, 2025 at 2:43 AM
+
+Version 2.3.121 (1)
+Activity	User	Date
+Ready for Distribution	Apple	May 1, 2025 at 11:42 AM
+In Review	Apple	May 1, 2025 at 10:11 AM
+Waiting for Review	dan@otherme.world	May 1, 2025 at 9:20 AM
+Ready for Review	dan@otherme.world	May 1, 2025 at 9:20 AM
+Prepare for Submission	abbas_atout@icloud.com	May 1, 2025 at 9:17 AM
+
+Version 2.3.057 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 28, 2025 at 5:37 AM
+In Review	Apple	Feb 28, 2025 at 5:22 AM
+Waiting for Review	dan@otherme.world	Feb 28, 2025 at 4:14 AM
+Ready for Review	dan@otherme.world	Feb 28, 2025 at 4:14 AM
+Prepare for Submission	abbas_atout@icloud.com	Feb 28, 2025 at 3:39 AM
+
+Version 2.3.045 (5)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 17, 2025 at 6:32 AM
+In Review	Apple	Feb 17, 2025 at 6:25 AM
+Waiting for Review	dan@otherme.world	Feb 17, 2025 at 6:04 AM
+Ready for Review	dan@otherme.world	Feb 17, 2025 at 6:04 AM
+Prepare for Submission	abbas_atout@icloud.com	Feb 17, 2025 at 5:59 AM
+
+Version 2.3.037 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 6, 2025 at 11:50 AM
+In Review	Apple	Feb 6, 2025 at 11:37 AM
+Waiting for Review	dan@otherme.world	Feb 6, 2025 at 9:57 AM
+Ready for Review	dan@otherme.world	Feb 6, 2025 at 9:57 AM
+Prepare for Submission	abbas_atout@icloud.com	Feb 6, 2025 at 9:48 AM
+
+Version 2.3.036 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 5, 2025 at 9:13 AM
+In Review	Apple	Feb 5, 2025 at 9:02 AM
+Waiting for Review	dan@otherme.world	Feb 5, 2025 at 8:14 AM
+Ready for Review	dan@otherme.world	Feb 5, 2025 at 8:14 AM
+Prepare for Submission	abbas_atout@icloud.com	Jan 15, 2025 at 9:34 AM
+
+Version 2.2.348 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Dec 13, 2024 at 4:23 PM
+In Review	Apple	Dec 13, 2024 at 4:14 PM
+Waiting for Review	dan@otherme.world	Dec 13, 2024 at 3:40 PM
+Ready for Review	dan@otherme.world	Dec 13, 2024 at 3:40 PM
+Prepare for Submission	abbas_atout@icloud.com	Dec 11, 2024 at 8:54 AM
+
+Version 2.2.339 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Dec 4, 2024 at 8:31 AM
+In Review	Apple	Dec 4, 2024 at 8:27 AM
+Waiting for Review	dan@otherme.world	Dec 4, 2024 at 7:22 AM
+Ready for Review	dan@otherme.world	Dec 4, 2024 at 7:20 AM
+Prepare for Submission	abbas_atout@icloud.com	Dec 4, 2024 at 7:14 AM
+
+Version 2.2.306 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Nov 5, 2024 at 6:27 AM
+In Review	Apple	Nov 5, 2024 at 6:21 AM
+Waiting for Review	dan@otherme.world	Nov 5, 2024 at 5:38 AM
+Ready for Review	dan@otherme.world	Nov 5, 2024 at 5:38 AM
+Prepare for Submission	abbas_atout@icloud.com	Nov 4, 2024 at 7:39 AM
+
+Version 2.2.295 (4)
+Activity	User	Date
+Ready for Distribution	Apple	Oct 22, 2024 at 7:17 AM
+In Review	Apple	Oct 22, 2024 at 7:11 AM
+Waiting for Review	dan@otherme.world	Oct 22, 2024 at 6:28 AM
+Ready for Review	dan@otherme.world	Oct 22, 2024 at 6:28 AM
+Prepare for Submission	abbas_atout@icloud.com	Oct 22, 2024 at 6:23 AM
+
+Version 2.2.288 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Oct 15, 2024 at 4:42 AM
+In Review	Apple	Oct 15, 2024 at 3:30 AM
+Waiting for Review	dan@otherme.world	Oct 15, 2024 at 3:00 AM
+Ready for Review	dan@otherme.world	Oct 15, 2024 at 3:00 AM
+Prepare for Submission	abbas_atout@icloud.com	Oct 15, 2024 at 2:53 AM
+
+Version 2.2.285 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Oct 14, 2024 at 6:14 AM
+In Review	Apple	Oct 14, 2024 at 5:27 AM
+Waiting for Review	dan@otherme.world	Oct 14, 2024 at 4:52 AM
+Ready for Review	dan@otherme.world	Oct 14, 2024 at 4:52 AM
+Prepare for Submission	abbas_atout@icloud.com	Oct 7, 2024 at 9:49 AM
+
+Version 2.2.267 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Sep 23, 2024 at 8:55 AM
+In Review	Apple	Sep 23, 2024 at 8:51 AM
+Waiting for Review	dan@otherme.world	Sep 23, 2024 at 8:34 AM
+Ready for Review	dan@otherme.world	Sep 23, 2024 at 8:34 AM
+Prepare for Submission	mmk100@mail.aub.edu	Sep 23, 2024 at 2:44 AM
+
+Version 2.2.261 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Sep 19, 2024 at 12:09 PM
+In Review	Apple	Sep 19, 2024 at 11:00 AM
+Waiting for Review	mmk100@mail.aub.edu	Sep 19, 2024 at 10:37 AM
+Ready for Review	mmk100@mail.aub.edu	Sep 19, 2024 at 10:37 AM
+Prepare for Submission	abbas_atout@icloud.com	Sep 19, 2024 at 9:39 AM
+
+Version 2.2.215 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Aug 2, 2024 at 4:53 PM
+In Review	Apple	Aug 2, 2024 at 4:39 PM
+Waiting for Review	dan@otherme.world	Aug 2, 2024 at 8:56 AM
+Ready for Review	dan@otherme.world	Aug 2, 2024 at 8:55 AM
+Prepare for Submission	abbas_atout@icloud.com	Aug 2, 2024 at 8:44 AM
+
+Version 2.2.193 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Jul 18, 2024 at 1:38 PM
+In Review	Apple	Jul 18, 2024 at 12:04 PM
+Waiting for Review	dan@otherme.world	Jul 18, 2024 at 10:01 AM
+Ready for Review	dan@otherme.world	Jul 18, 2024 at 10:01 AM
+Prepare for Submission	abbas_atout@icloud.com	Jul 17, 2024 at 2:36 AM
+
+Version 2.2.124 (1)
+Activity	User	Date
+Ready for Distribution	Apple	May 6, 2024 at 4:08 AM
+In Review	Apple	May 6, 2024 at 4:03 AM
+Waiting for Review	dan@otherme.world	May 6, 2024 at 3:15 AM
+Ready for Review	dan@otherme.world	May 6, 2024 at 3:15 AM
+Prepare for Submission	dan@otherme.world	May 6, 2024 at 3:12 AM
+
+Version 2.2.121 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Apr 30, 2024 at 4:17 PM
+In Review	Apple	Apr 30, 2024 at 1:13 PM
+Waiting for Review	dan@otherme.world	Apr 30, 2024 at 10:19 AM
+Ready for Review	dan@otherme.world	Apr 30, 2024 at 10:19 AM
+Prepare for Submission	dan@otherme.world	Apr 30, 2024 at 10:09 AM
+
+Version 2.2.079 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Mar 20, 2024 at 9:37 AM
+In Review	Apple	Mar 20, 2024 at 9:09 AM
+Waiting for Review	dan@otherme.world	Mar 20, 2024 at 9:02 AM
+Ready for Review	dan@otherme.world	Mar 20, 2024 at 9:02 AM
+Rejected	Apple	Mar 20, 2024 at 8:45 AM
+In Review	Apple	Mar 20, 2024 at 8:28 AM
+Waiting for Review	dan@otherme.world	Mar 20, 2024 at 8:14 AM
+Ready for Review	dan@otherme.world	Mar 20, 2024 at 8:13 AM
+Prepare for Submission	dan@otherme.world	Mar 20, 2024 at 7:55 AM
+
+Version 2.2.061 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Mar 1, 2024 at 11:13 AM
+In Review	Apple	Mar 1, 2024 at 10:49 AM
+Waiting for Review	dan@otherme.world	Mar 1, 2024 at 10:38 AM
+Ready for Review	dan@otherme.world	Mar 1, 2024 at 10:36 AM
+Prepare for Submission	dan@otherme.world	Mar 1, 2024 at 10:25 AM
+
+Version 2.2.058 (2)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 28, 2024 at 5:38 PM
+In Review	Apple	Feb 28, 2024 at 5:09 PM
+Rejected	Apple	Feb 27, 2024 at 8:28 PM
+In Review	Apple	Feb 27, 2024 at 4:19 PM
+Waiting for Review	dan@otherme.world	Feb 27, 2024 at 12:22 PM
+Ready for Review	dan@otherme.world	Feb 27, 2024 at 12:22 PM
+Prepare for Submission	dan@otherme.world	Feb 27, 2024 at 12:11 PM
+
+Version 2.2.040 (1)
+Activity	User	Date
+Ready for Distribution	Apple	Feb 13, 2024 at 4:53 AM
+In Review	Apple	Feb 13, 2024 at 4:42 AM
+Waiting for Review	dan@otherme.world	Feb 13, 2024 at 4:25 AM
+Ready for Review	dan@otherme.world	Feb 13, 2024 at 4:25 AM
+Prepare for Submission	dan@otherme.world	Feb 13, 2024 at 3:37 AM
+
+Version 2.2.025 (6)
+Activity	User	Date
+Ready for Sale	Apple	Jan 25, 2024 at 4:02 PM
+In Review	Apple	Jan 25, 2024 at 3:48 PM
+Waiting for Review	dan@otherme.world	Jan 25, 2024 at 10:53 AM
+Ready for Review	dan@otherme.world	Jan 25, 2024 at 10:52 AM
+Prepare for Submission	dan@otherme.world	Jan 25, 2024 at 10:51 AM
+Prepare for Submission	dan@otherme.world	Jan 25, 2024 at 10:51 AM
+Developer Rejected	dan@otherme.world	Jan 15, 2024 at 4:06 PM
+Waiting for Review	dan@otherme.world	Jan 15, 2024 at 2:52 PM
+Ready for Review	mmk100@mail.aub.edu	Jan 15, 2024 at 2:51 PM
+Prepare for Submission	mmk100@mail.aub.edu	Jan 15, 2024 at 2:36 PM
+
+Version 2.0.316
+Activity	User	Date
+Replaced	Apple	Jan 25, 2024 at 4:02 PM
+Ready for Sale	Apple	Nov 12, 2023 at 3:49 PM
+In Review	Apple	Nov 12, 2023 at 3:31 PM
+Waiting for Review	dan@otherme.world	Nov 12, 2023 at 3:21 PM
+Ready for Review	dan@otherme.world	Nov 12, 2023 at 3:20 PM
+Prepare for Submission	mmk100@mail.aub.edu	Nov 12, 2023 at 2:52 PM
+
+Version 2.0.314
+Activity	User	Date
+Replaced	Apple	Nov 12, 2023 at 3:49 PM
+Ready for Sale	Apple	Nov 11, 2023 at 3:40 PM
+In Review	Apple	Nov 11, 2023 at 2:57 PM
+Waiting for Review	mmk100@mail.aub.edu	Nov 11, 2023 at 3:35 AM
+Ready for Review	mmk100@mail.aub.edu	Nov 11, 2023 at 3:35 AM
+Rejected	Apple	Nov 10, 2023 at 5:53 PM
+In Review	Apple	Nov 10, 2023 at 5:22 PM
+Waiting for Review	dan@otherme.world	Nov 10, 2023 at 12:34 PM
+Ready for Review	dan@otherme.world	Nov 10, 2023 at 12:34 PM
+Prepare for Submission	dan@otherme.world	Nov 10, 2023 at 10:22 AM
+
+Version 2.0.200
+Activity	User	Date
+Replaced	Apple	Nov 11, 2023 at 3:40 PM
+Ready for Sale	Apple	Jul 21, 2023 at 1:33 PM
+In Review	Apple	Jul 21, 2023 at 12:56 PM
+Waiting for Review	mmk100@mail.aub.edu	Jul 21, 2023 at 8:52 AM
+Ready for Review	mmk100@mail.aub.edu	Jul 21, 2023 at 8:52 AM
+Prepare for Submission	dan@otherme.world	Jul 19, 2023 at 2:55 PM
+
+Version 1.0.15
+Activity	User	Date
+Replaced	Apple	Jul 21, 2023 at 1:33 PM
+Ready for Sale	Apple	Jul 5, 2023 at 12:17 PM
+Pending Agreement	Apple	Jun 30, 2023 at 5:07 AM
+Ready for Sale	Apple	Apr 7, 2023 at 8:40 PM
+In Review	Apple	Apr 7, 2023 at 8:20 PM
+Waiting for Review	dan@otherme.world	Apr 7, 2023 at 11:02 AM
+Ready for Review	dan@otherme.world	Apr 7, 2023 at 11:02 AM
+Prepare for Submission	dan@otherme.world	Apr 5, 2023 at 11:02 AM
+
+Version 1.0.10
+Activity	User	Date
+Replaced	Apple	Apr 7, 2023 at 8:40 PM
+Ready for Sale	Apple	Mar 15, 2023 at 3:24 PM
+In Review	Apple	Mar 15, 2023 at 3:11 PM
+Waiting for Review	dan@otherme.world	Mar 14, 2023 at 10:16 AM
+Ready for Review	dan@otherme.world	Mar 14, 2023 at 10:16 AM
+Prepare for Submission	dan@otherme.world	Mar 14, 2023 at 10:14 AM
+
+Version 1.0.6
+Activity	User	Date
+Replaced	Apple	Mar 15, 2023 at 3:24 PM
+Ready for Sale	Apple	Mar 8, 2023 at 6:22 PM
+In Review	Apple	Mar 8, 2023 at 3:32 PM
+Waiting for Review	dan@otherme.world	Mar 8, 2023 at 1:14 PM
+Ready for Review	dan@otherme.world	Mar 8, 2023 at 1:14 PM
+Prepare for Submission	dan@otherme.world	Mar 8, 2023 at 1:11 PM
+
+Version 1.0.3
+Activity	User	Date
+Replaced	Apple	Mar 8, 2023 at 6:22 PM
+Ready for Sale	Apple	Feb 21, 2023 at 7:09 PM
+In Review	Apple	Feb 21, 2023 at 6:30 PM
+Waiting for Review	dan@otherme.world	Feb 21, 2023 at 10:39 AM
+Ready for Review	dan@otherme.world	Feb 21, 2023 at 10:39 AM
+Prepare for Submission	dan@otherme.world	Feb 21, 2023 at 10:25 AM
+
+Version 1.0.2
+Activity	User	Date
+Replaced	Apple	Feb 21, 2023 at 7:09 PM
+Ready for Sale	Apple	Feb 17, 2023 at 2:53 PM
+In Review	Apple	Feb 17, 2023 at 2:41 PM
+Waiting for Review	dan@otherme.world	Feb 17, 2023 at 8:27 AM
+Ready for Review	dan@otherme.world	Feb 17, 2023 at 8:27 AM
+Prepare for Submission	dan@otherme.world	Feb 17, 2023 at 8:25 AM
+
+Version 1.0.1
+Activity	User	Date
+Replaced	Apple	Feb 17, 2023 at 2:53 PM
+Ready for Sale	Apple	Feb 15, 2023 at 4:23 PM
+In Review	Apple	Feb 15, 2023 at 4:05 PM
+Waiting for Review	dan@otherme.world	Feb 15, 2023 at 2:46 PM
+Ready for Review	dan@otherme.world	Feb 15, 2023 at 2:46 PM
+Prepare for Submission	dan@otherme.world	Feb 15, 2023 at 2:31 PM
+
+Version 1.0
+Activity	User	Date
+Replaced	Apple	Feb 15, 2023 at 4:23 PM
+Ready for Sale	Apple	Feb 9, 2023 at 2:36 PM
+In Review	Apple	Feb 9, 2023 at 10:39 AM
+Rejected	Apple	Feb 7, 2023 at 4:31 PM
+In Review	Apple	Feb 7, 2023 at 3:24 PM
+Waiting for Review	dan@otherme.world	Feb 6, 2023 at 10:50 AM
+Ready for Review	dan@otherme.world	Feb 6, 2023 at 10:49 AM
+Prepare for Submission	dan@otherme.world	Jan 17, 2023 at 12:58 PM

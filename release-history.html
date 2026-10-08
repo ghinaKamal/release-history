@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Go Helen Release History</title>
+<style>
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1e293b; background: #f4f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 48px 20px; }
+main { max-width: 1320px; margin: auto; }
+.eyebrow { color: #2563eb; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+h1 { margin: 12px 0; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.04em; color: #0f172a; }
+p { line-height: 1.65; }
+.intro { max-width: 740px; color: #526176; margin-bottom: 28px; }
+.app-picker { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding: 18px 20px; margin: 0 0 22px; border: 1px solid #dce3ee; border-radius: 14px; background: white; box-shadow: 0 8px 32px #0f172a06; }
+.app-picker-field { display: grid; gap: 7px; min-width: min(100%, 300px); }
+.app-picker label { color: #475569; font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.app-picker select { width: 100%; padding: 11px 40px 11px 13px; border: 1px solid #cbd5e1; border-radius: 9px; color: #0f172a; background: white; font: inherit; font-weight: 650; cursor: pointer; }
+.app-picker select:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+.current-app { margin: 0; color: #526176; font-size: .9rem; text-align: right; }
+.current-app strong { color: #0f172a; }
+.availability { display: inline-block; margin-left: 7px; padding: 3px 8px; border-radius: 999px; background: #fff7ed; color: #9a3412; font-size: .72rem; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+.table-wrap { overflow-x: auto; border: 1px solid #dce3ee; border-radius: 14px; background: white; box-shadow: 0 8px 32px #0f172a06; }
+table { border-collapse: collapse; width: 100%; text-align: left; white-space: nowrap; }
+caption { text-align: left; padding: 20px 24px; font-weight: 650; border-bottom: 1px solid #e2e8f0; }
+thead { background: #eef3f9; color: #475569; font-size: .8rem; }
+th, td { padding: 13px 24px; border-bottom: 1px solid #edf1f6; }
+.timezone { color: #64748b; font-weight: 500; }
+tbody th { font-weight: 600; color: #0f172a; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+thead th:nth-child(3), tbody td:nth-child(3) { text-align: right; }
+tbody tr:last-child > * { border-bottom: none; }
+tbody tr:hover { background: #f8faff; }
+.status { display: inline-block; padding: 4px 10px; background: #ecfdf5; color: #166534; border-radius: 999px; font-size: .78rem; }
+.empty-state { padding: 42px 24px; color: #64748b; text-align: center; white-space: normal; }
+.note { margin-top: 22px; padding: 16px 20px; background: #eaf1ff; border-left: 3px solid #2563eb; border-radius: 4px; font-size: .9rem; }
+footer { font-size: .8rem; color: #64748b; margin-top: 22px; }
+a { color: #2563eb; }
+@media (max-width: 600px) { body { padding: 28px 14px; } .app-picker { align-items: stretch; flex-direction: column; } .current-app { text-align: left; } th, td { padding: 12px 16px; } }
+@media print { body { padding: 0; background: white; } .app-picker { display: none; } .table-wrap { box-shadow: none; overflow: visible; } th, td { padding: 7px 12px; } thead { display: table-header-group; } tr { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow"><span id="eyebrow-app">Go Helen</span> · iOS</div>
+<h1><span id="heading-app">Go Helen</span> Release History</h1>
+<p class="intro">When each release first reached <strong>Ready for Distribution</strong> or, for older releases, <strong>Ready for Sale</strong>. Times are shown in Beirut time.</p>
+</header>
+<section class="app-picker" aria-labelledby="app-picker-label">
+<div class="app-picker-field">
+<label id="app-picker-label" for="app-select">App</label>
+<select id="app-select">
+<option value="ask-helen">Ask Helen</option>
+<option value="ask-helen-kids">Ask Helen Kids — Not Live</option>
+<option value="build-helen">Build Helen</option>
+<option value="go-helen" selected>Go Helen</option>
+<option value="helen-assistant">Helen Assistant — Not Live</option>
+<option value="helen-at-home">Helen at Home</option>
+<option value="helen-exec">Helen Exec — Not Live</option>
+<option value="helen-linen">Helen Linen</option>
+<option value="helen-podcast">Helen Podcast</option>
+<option value="lead-helen">Lead Helen</option>
+<option value="one-helen">One Helen</option>
+<option value="one-nurse">One Nurse</option>
+<option value="team-helen">Team Helen</option>
+</select>
+</div>
+<p class="current-app" id="current-app" aria-live="polite"><strong>Go Helen</strong> is selected</p>
+</section>
+<div class="table-wrap" id="release-table-region" tabindex="0" role="region" aria-label="Go Helen release history table">
+<table>
+<caption id="release-caption">41 releases · newest first</caption>
+<thead><tr><th scope="col">Release</th><th scope="col">Ready date</th><th scope="col">Time</th><th scope="col">Recorded status</th><th scope="col">In-app release notes</th><th scope="col">Development release notes</th></tr></thead>
+<tbody id="release-rows">
+<tr><th scope="row">2.4.209 (3)</th><td><time datetime="2026-08-05T10:55:00">Aug 5, 2026</time></td><td>10:55 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/2.4.209(3).html" target="_blank" rel="noopener" aria-label="Release notes for 2.4.209 (3)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.4.142 (1)</th><td><time datetime="2026-06-01T09:49:00">Jun 1, 2026</time></td><td>9:49 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/2.4.142(1).html" target="_blank" rel="noopener" aria-label="Release notes for 2.4.142 (1)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.4.056 (2)</th><td><time datetime="2026-02-25T20:42:00">Feb 25, 2026</time></td><td>8:42 PM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/2.4.056(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.4.056 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.4.050 (2)</th><td><time datetime="2026-02-24T05:22:00">Feb 24, 2026</time></td><td>5:22 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/2.4.050(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.4.050 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.4.021 (2)</th><td><time datetime="2026-01-22T05:27:00">Jan 22, 2026</time></td><td>5:27 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.4.021(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.4.021 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.260 (2)</th><td><time datetime="2025-09-30T03:15:00">Sep 30, 2025</time></td><td>3:15 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/2.3.260(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.260 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.225 (1)</th><td><time datetime="2025-08-13T10:12:00">Aug 13, 2025</time></td><td>10:12 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.225(1).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.225 (1)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.202 (2)</th><td><time datetime="2025-07-23T04:24:00">Jul 23, 2025</time></td><td>4:24 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.202(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.202 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.189 (2)</th><td><time datetime="2025-07-09T03:38:00">Jul 9, 2025</time></td><td>3:38 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.189(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.189 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.121 (1)</th><td><time datetime="2025-05-01T11:42:00">May 1, 2025</time></td><td>11:42 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.121(1).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.121 (1)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.057 (1)</th><td><time datetime="2025-02-28T05:37:00">Feb 28, 2025</time></td><td>5:37 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.057(1).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.057 (1)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.045 (5)</th><td><time datetime="2025-02-17T06:32:00">Feb 17, 2025</time></td><td>6:32 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.045(5).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.045 (5)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.037 (2)</th><td><time datetime="2025-02-06T11:50:00">Feb 6, 2025</time></td><td>11:50 AM</td><td><span class="status">Ready for Distribution</span></td><td><a href="https://bennettranville.blob.core.windows.net/go-helen/release-notes/2.3.037(2).html" target="_blank" rel="noopener" aria-label="Release notes for 2.3.037 (2)">View notes</a></td><td></td></tr>
+<tr><th scope="row">2.3.036 (2)</th><td><time datetime="2025-02-05T09:13:00">Feb 5, 2025</time></td><td>9:13 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.348 (1)</th><td><time datetime="2024-12-13T16:23:00">Dec 13, 2024</time></td><td>4:23 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.339 (2)</th><td><time datetime="2024-12-04T08:31:00">Dec 4, 2024</time></td><td>8:31 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.306 (1)</th><td><time datetime="2024-11-05T06:27:00">Nov 5, 2024</time></td><td>6:27 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.295 (4)</th><td><time datetime="2024-10-22T07:17:00">Oct 22, 2024</time></td><td>7:17 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.288 (2)</th><td><time datetime="2024-10-15T04:42:00">Oct 15, 2024</time></td><td>4:42 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.285 (1)</th><td><time datetime="2024-10-14T06:14:00">Oct 14, 2024</time></td><td>6:14 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.267 (1)</th><td><time datetime="2024-09-23T08:55:00">Sep 23, 2024</time></td><td>8:55 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.261 (1)</th><td><time datetime="2024-09-19T12:09:00">Sep 19, 2024</time></td><td>12:09 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.215 (1)</th><td><time datetime="2024-08-02T16:53:00">Aug 2, 2024</time></td><td>4:53 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.193 (2)</th><td><time datetime="2024-07-18T13:38:00">Jul 18, 2024</time></td><td>1:38 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.124 (1)</th><td><time datetime="2024-05-06T04:08:00">May 6, 2024</time></td><td>4:08 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.121 (2)</th><td><time datetime="2024-04-30T16:17:00">Apr 30, 2024</time></td><td>4:17 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.079 (2)</th><td><time datetime="2024-03-20T09:37:00">Mar 20, 2024</time></td><td>9:37 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.061 (2)</th><td><time datetime="2024-03-01T11:13:00">Mar 1, 2024</time></td><td>11:13 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.058 (2)</th><td><time datetime="2024-02-28T17:38:00">Feb 28, 2024</time></td><td>5:38 PM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.040 (1)</th><td><time datetime="2024-02-13T04:53:00">Feb 13, 2024</time></td><td>4:53 AM</td><td><span class="status">Ready for Distribution</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.2.025 (6)</th><td><time datetime="2024-01-25T16:02:00">Jan 25, 2024</time></td><td>4:02 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.0.316</th><td><time datetime="2023-11-12T15:49:00">Nov 12, 2023</time></td><td>3:49 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.0.314</th><td><time datetime="2023-11-11T15:40:00">Nov 11, 2023</time></td><td>3:40 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">2.0.200</th><td><time datetime="2023-07-21T13:33:00">Jul 21, 2023</time></td><td>1:33 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.15</th><td><time datetime="2023-04-07T20:40:00">Apr 7, 2023</time></td><td>8:40 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.10</th><td><time datetime="2023-03-15T15:24:00">Mar 15, 2023</time></td><td>3:24 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.6</th><td><time datetime="2023-03-08T18:22:00">Mar 8, 2023</time></td><td>6:22 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.3</th><td><time datetime="2023-02-21T19:09:00">Feb 21, 2023</time></td><td>7:09 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.2</th><td><time datetime="2023-02-17T14:53:00">Feb 17, 2023</time></td><td>2:53 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0.1</th><td><time datetime="2023-02-15T16:23:00">Feb 15, 2023</time></td><td>4:23 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+<tr><th scope="row">1.0</th><td><time datetime="2023-02-09T14:36:00">Feb 9, 2023</time></td><td>2:36 PM</td><td><span class="status">Ready for Sale</span></td><td><span aria-label="No release notes available">&mdash;</span></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div id="app-notes"><p class="note"><strong>Version 1.0.15:</strong> First ready for sale on Apr 7, 2023 at 8:40 PM. It returned to <strong>Ready for Sale</strong> on Jul 5, 2023 at 12:17 PM, following a <strong>Pending Agreement</strong> status.</p></div>
+<footer id="source-footer">Source: <a href="gohelenversionhistory.txt" target="_blank" rel="noopener">gohelenversionhistory.txt</a></footer>
+</main>
+<script>
+const releaseRows = document.querySelector("#release-rows");
+
+function readExistingGoHelenReleases() {
+  const primaryReleaseNotes = new Set([
+    "2.4.209(3).html", "2.4.142(1).html", "2.4.056(2).html", "2.4.050(2).html", "2.3.260(2).html"
+  ]);
+  const fallbackReleaseNotes = new Set([
+    "2.4.021(2).html", "2.3.225(1).html", "2.3.202(2).html", "2.3.189(2).html",
+    "2.3.121(1).html", "2.3.057(1).html", "2.3.045(5).html", "2.3.037(2).html"
+  ]);
+
+  return Array.from(releaseRows.rows).map((row) => {
+    const cells = row.cells;
+    const dateElement = cells[1].querySelector("time");
+    const version = cells[0].textContent.trim();
+    const filename = `${version.replace(/\s+/g, "")}.html`;
+    const notesHref = primaryReleaseNotes.has(filename)
+      ? `https://bennettranville.blob.core.windows.net/go-helen/release-notes/en-US/${filename}`
+      : fallbackReleaseNotes.has(filename)
+      ? `https://bennettranville.blob.core.windows.net/go-helen/release-notes/${filename}`
+      : null;
+
+    return {
+      version,
+      datetime: dateElement.dateTime,
+      date: dateElement.textContent.trim(),
+      time: cells[2].textContent.trim(),
+      status: cells[3].textContent.trim(),
+      notesHref,
+      developmentNotes: cells[5].textContent.trim()
+    };
+  });
+}
+
+// Add future apps or releases here; the table markup does not need to change.
+const releaseHistories = {
+  "team-helen": {
+    name: "Team Helen",
+    platform: "iOS",
+    source: { label: "team-helen-versions.md", href: "team-helen-versions.md" },
+    releases: [
+      { version: "2.4.210 (2)", datetime: "2026-08-05T17:43:00", date: "Aug 5, 2026", time: "5:43 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.4.210(2).html", developmentNotes: "" },
+      { version: "2.4.141 (1)", datetime: "2026-06-02T09:08:00", date: "Jun 2, 2026", time: "9:08 AM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.4.141(1).html", developmentNotes: "" },
+      { version: "2.4.050 (1)", datetime: "2026-03-16T16:01:00", date: "Mar 16, 2026", time: "4:01 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.4.050(1).html", developmentNotes: "" },
+      { version: "2.3.311 (2)", datetime: "2025-11-10T20:22:00", date: "Nov 10, 2025", time: "8:22 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.3.311(2).html", developmentNotes: "" },
+      { version: "2.3.268 (2)", datetime: "2025-09-30T10:06:00", date: "Sep 30, 2025", time: "10:06 AM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.3.268(2).html", developmentNotes: "" },
+      { version: "2.3.205 (4)", datetime: "2025-07-28T10:06:00", date: "Jul 28, 2025", time: "10:06 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.177 (1)", datetime: "2025-06-30T11:32:00", date: "Jun 30, 2025", time: "11:32 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.031 (1)", datetime: "2025-01-31T16:18:00", date: "Jan 31, 2025", time: "4:18 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.3.031(1).html", developmentNotes: "" },
+      { version: "2.3.014 (2)", datetime: "2025-01-17T13:48:00", date: "Jan 17, 2025", time: "1:48 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.3.014(2).html", developmentNotes: "" },
+      { version: "2.2.353 (2)", datetime: "2024-12-23T12:02:00", date: "Dec 23, 2024", time: "12:02 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/concierge-app-assets/release-notes/en-US/2.2.353(2).html", developmentNotes: "" },
+      { version: "2.2.334 (4)", datetime: "2024-12-03T16:26:00", date: "Dec 3, 2024", time: "4:26 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.318 (2)", datetime: "2024-11-13T17:41:00", date: "Nov 13, 2024", time: "5:41 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.298(2)", datetime: "2024-10-25T13:38:00", date: "Oct 25, 2024", time: "1:38 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.281 (1)", datetime: "2024-10-15T10:32:00", date: "Oct 15, 2024", time: "10:32 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.264 (3)", datetime: "2024-09-20T19:23:00", date: "Sep 20, 2024", time: "7:23 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.262 (2)", datetime: "2024-09-19T18:12:00", date: "Sep 19, 2024", time: "6:12 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.104 (2)", datetime: "2024-04-13T14:52:00", date: "Apr 13, 2024", time: "2:52 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.068 (6)", datetime: "2024-03-09T00:25:00", date: "Mar 9, 2024", time: "12:25 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.061 (4)", datetime: "2024-03-01T20:30:00", date: "Mar 1, 2024", time: "8:30 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.030 (1)", datetime: "2024-01-30T19:57:00", date: "Jan 30, 2024", time: "7:57 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "2.0.352 (3)", datetime: "2023-12-18T20:36:00", date: "Dec 18, 2023", time: "8:36 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "2.0.347 (2)", datetime: "2023-12-13T16:42:00", date: "Dec 13, 2023", time: "4:42 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "2.0.270 (5)", datetime: "2023-09-27T22:32:00", date: "Sep 27, 2023", time: "10:32 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "2.0.200", datetime: "2023-07-21T20:11:00", date: "Jul 21, 2023", time: "8:11 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "1.0.3", datetime: "2023-02-22T01:52:00", date: "Feb 22, 2023", time: "1:52 AM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "1.0.2", datetime: "2023-01-03T17:32:00", date: "Jan 3, 2023", time: "5:32 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "1.0.1", datetime: "2022-12-20T23:02:00", date: "Dec 20, 2022", time: "11:02 PM", status: "Ready for Sale", notesHref: null, developmentNotes: "" },
+      { version: "1.0", datetime: "2022-12-20T10:26:00", date: "Dec 20, 2022", time: "10:26 AM", status: "Ready for Sale", notesHref: null, developmentNotes: "" }
+    ],
+    notices: [
+      "<strong>Version 1.0.3:</strong> First ready for sale on Feb 22, 2023 at 1:52 AM. It returned to <strong>Ready for Sale</strong> on Jul 5, 2023 at 7:17 PM, following a <strong>Pending Agreement</strong> status."
+    ]
+  },
+  "build-helen": {
+    name: "Build Helen",
+    platform: "iOS",
+    source: { label: "build-helen-versions.md", href: "build-helen-versions.md" },
+    releases: [
+      { version: "2.4.076 (2)", datetime: "2026-03-19T20:46:00", date: "Mar 19, 2026", time: "8:46 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.284 (4)", datetime: "2024-10-10T19:15:00", date: "Oct 10, 2024", time: "7:15 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "go-helen": {
+    name: "Go Helen",
+    platform: "iOS",
+    source: { label: "gohelenversionhistory.txt", href: "gohelenversionhistory.txt" },
+    releases: readExistingGoHelenReleases(),
+    notices: [
+      "<strong>Version 1.0.15:</strong> First ready for sale on Apr 7, 2023 at 8:40 PM. It returned to <strong>Ready for Sale</strong> on Jul 5, 2023 at 12:17 PM, following a <strong>Pending Agreement</strong> status."
+    ]
+  },
+  "helen-at-home": {
+    name: "Helen at Home",
+    platform: "iOS",
+    source: { label: "helen_at_home_distribution_history.md", href: "helen_at_home_distribution_history.md" },
+    releases: [
+      { version: "2.4.251 (2)", datetime: "2026-09-16T17:09:00", date: "Sep 16, 2026", time: "5:09 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.232 (1)", datetime: "2026-08-20T07:28:00", date: "Aug 20, 2026", time: "7:28 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.230 (1)", datetime: "2026-08-19T07:36:00", date: "Aug 19, 2026", time: "7:36 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.219 (1)", datetime: "2026-08-14T11:06:00", date: "Aug 14, 2026", time: "11:06 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.194 (1)", datetime: "2026-07-13T18:52:00", date: "Jul 13, 2026", time: "6:52 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.189 (1)", datetime: "2026-07-08T20:11:00", date: "Jul 8, 2026", time: "8:11 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.188 (3)", datetime: "2026-07-08T14:26:00", date: "Jul 8, 2026", time: "2:26 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.187 (1)", datetime: "2026-07-06T19:44:00", date: "Jul 6, 2026", time: "7:44 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.0", datetime: "2026-07-06T10:57:00", date: "Jul 6, 2026", time: "10:57 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "helen-linen": {
+    name: "Helen Linen",
+    platform: "iOS",
+    source: { label: "helen_linen_distribution_history.md", href: "helen_linen_distribution_history.md" },
+    releases: [
+      { version: "2.4.127 (1)", datetime: "2026-05-09T01:13:00", date: "May 9, 2026", time: "1:13 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.105 (2)", datetime: "2026-04-15T20:36:00", date: "Apr 15, 2026", time: "8:36 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.076 (2)", datetime: "2026-03-31T08:59:00", date: "Mar 31, 2026", time: "8:59 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "helen-podcast": {
+    name: "Helen Podcast",
+    platform: "iOS",
+    source: { label: "# Helen Podcast — iOS Distribution Histo.md", href: "%23%20Helen%20Podcast%20%E2%80%94%20iOS%20Distribution%20Histo.md" },
+    releases: [
+      { version: "2.4.117 (4)", datetime: "2026-04-29T16:27:00", date: "Apr 29, 2026", time: "4:27 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.076 (1)", datetime: "2026-03-17T21:43:00", date: "Mar 17, 2026", time: "9:43 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "lead-helen": {
+    name: "Lead Helen",
+    platform: "iOS",
+    source: { label: "# Lead Helen — iOS Distribution History.md", href: "%23%20Lead%20Helen%20%E2%80%94%20iOS%20Distribution%20History.md" },
+    releases: [
+      { version: "2.4.273 (3)", datetime: "2026-10-05T12:27:00", date: "Oct 5, 2026", time: "12:27 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/toolbox/release-notes/2.4.273(3).html", developmentNotes: "" },
+      { version: "2.4.201 (1)", datetime: "2026-07-27T22:28:00", date: "Jul 27, 2026", time: "10:28 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/toolbox/release-notes/2.4.201(1).html", developmentNotes: "" },
+      { version: "2.4.128 (2)", datetime: "2026-05-12T17:16:00", date: "May 12, 2026", time: "5:16 PM", status: "Ready for Distribution", notesHref: "https://bennettranville.blob.core.windows.net/toolbox/release-notes/2.4.128(2).html", developmentNotes: "" },
+      { version: "2.4.076 (2)", datetime: "2026-04-01T10:22:00", date: "Apr 1, 2026", time: "10:22 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "one-helen": {
+    name: "One Helen",
+    platform: "iOS",
+    source: { label: "# One Helen — iOS Distribution History.md", href: "%23%20One%20Helen%20%E2%80%94%20iOS%20Distribution%20History.md" },
+    releases: [
+      { version: "2.3.153 (3)", datetime: "2026-06-03T09:01:00", date: "Jun 3, 2026", time: "9:01 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.096 (2)", datetime: "2026-04-07T18:21:00", date: "Apr 7, 2026", time: "6:21 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.350 (1)", datetime: "2026-02-13T16:19:00", date: "Feb 13, 2026", time: "4:19 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.094 (1)", datetime: "2025-04-04T16:56:00", date: "Apr 4, 2025", time: "4:56 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.316 (5)", datetime: "2024-11-12T09:29:00", date: "Nov 12, 2024", time: "9:29 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.284 (2)", datetime: "2024-10-10T17:46:00", date: "Oct 10, 2024", time: "5:46 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.261 (4)", datetime: "2024-09-18T10:48:00", date: "Sep 18, 2024", time: "10:48 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.247 (3)", datetime: "2024-09-04T00:54:00", date: "Sep 4, 2024", time: "12:54 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.233 (1)", datetime: "2024-08-20T18:35:00", date: "Aug 20, 2024", time: "6:35 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.232 (2)", datetime: "2024-08-19T14:59:00", date: "Aug 19, 2024", time: "2:59 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.225 (2)", datetime: "2024-08-12T15:05:00", date: "Aug 12, 2024", time: "3:05 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.222 (3)", datetime: "2024-08-08T13:11:00", date: "Aug 8, 2024", time: "1:11 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.221 (1)", datetime: "2024-08-07T20:03:00", date: "Aug 7, 2024", time: "8:03 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.220 (1)", datetime: "2024-08-07T16:58:00", date: "Aug 7, 2024", time: "4:58 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "1.1.218 (2)", datetime: "2024-08-05T17:32:00", date: "Aug 5, 2024", time: "5:32 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "one-nurse": {
+    name: "One Nurse",
+    platform: "iOS",
+    source: { label: "# One Nurse — iOS Distribution History.md", href: "%23%20One%20Nurse%20%E2%80%94%20iOS%20Distribution%20History.md" },
+    releases: [
+      { version: "2.3.217 (1)", datetime: "2025-08-13T15:21:00", date: "Aug 13, 2025", time: "3:21 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.155 (3)", datetime: "2025-06-04T15:08:00", date: "Jun 4, 2025", time: "3:08 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.052 (2)", datetime: "2025-03-05T14:44:00", date: "Mar 5, 2025", time: "2:44 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "ask-helen": {
+    name: "Ask Helen",
+    platform: "iOS",
+    source: { label: "ask_helen_distribution_history.md", href: "ask_helen_distribution_history.md" },
+    releases: [
+      { version: "2.4.265 (1)", datetime: "2026-09-28T13:36:00", date: "Sep 28, 2026", time: "1:36 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.218 (2)", datetime: "2026-08-14T15:46:00", date: "Aug 14, 2026", time: "3:46 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.4.161 (1)", datetime: "2026-06-12T17:53:00", date: "Jun 12, 2026", time: "5:53 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.211 (2)", datetime: "2025-07-31T12:36:00", date: "Jul 31, 2025", time: "12:36 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.197 (1)", datetime: "2025-07-18T10:52:00", date: "Jul 18, 2025", time: "10:52 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.148 (2)", datetime: "2025-07-09T17:55:00", date: "Jul 9, 2025", time: "5:55 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.3.125 (1)", datetime: "2025-05-06T12:18:00", date: "May 6, 2025", time: "12:18 PM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" },
+      { version: "2.2.079 (1)", datetime: "2025-01-28T11:13:00", date: "Jan 28, 2025", time: "11:13 AM", status: "Ready for Distribution", notesHref: null, developmentNotes: "" }
+    ],
+    notices: []
+  },
+  "ask-helen-kids": {
+    name: "Ask Helen Kids",
+    platform: "iOS",
+    isLive: false,
+    source: null,
+    releases: [],
+    notices: []
+  },
+  "helen-exec": {
+    name: "Helen Exec",
+    platform: "iOS",
+    isLive: false,
+    source: null,
+    releases: [],
+    notices: []
+  },
+  "helen-assistant": {
+    name: "Helen Assistant",
+    platform: "iOS",
+    isLive: false,
+    source: null,
+    releases: [],
+    notices: []
+  }
+};
+
+const appSelect = document.querySelector("#app-select");
+const headingApp = document.querySelector("#heading-app");
+const eyebrowApp = document.querySelector("#eyebrow-app");
+const currentApp = document.querySelector("#current-app");
+const releaseCaption = document.querySelector("#release-caption");
+const tableRegion = document.querySelector("#release-table-region");
+const appNotes = document.querySelector("#app-notes");
+const sourceFooter = document.querySelector("#source-footer");
+
+function addCell(row, text) {
+  const cell = document.createElement("td");
+  cell.textContent = text;
+  row.append(cell);
+  return cell;
+}
+
+function renderRelease(release, app) {
+  const row = document.createElement("tr");
+  const releaseHeader = document.createElement("th");
+  releaseHeader.scope = "row";
+  releaseHeader.textContent = release.version;
+  row.append(releaseHeader);
+
+  const dateCell = document.createElement("td");
+  const dateElement = document.createElement("time");
+  dateElement.dateTime = release.datetime;
+  dateElement.textContent = release.date;
+  dateCell.append(dateElement);
+  row.append(dateCell);
+
+  addCell(row, release.time);
+
+  const statusCell = document.createElement("td");
+  const status = document.createElement("span");
+  status.className = "status";
+  status.textContent = release.status;
+  statusCell.append(status);
+  row.append(statusCell);
+
+  const notesCell = document.createElement("td");
+  if (release.notesHref) {
+    const link = document.createElement("a");
+    link.href = release.notesHref;
+    link.textContent = "View notes";
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.setAttribute("aria-label", `Release notes for ${app.name} ${release.version}`);
+    notesCell.append(link);
+  } else {
+    const unavailable = document.createElement("span");
+    unavailable.setAttribute("aria-label", "No release notes available");
+    unavailable.textContent = "—";
+    notesCell.append(unavailable);
+  }
+  row.append(notesCell);
+
+  addCell(row, release.developmentNotes);
+  return row;
+}
+
+function renderApp(appId) {
+  const app = releaseHistories[appId] || releaseHistories["go-helen"];
+  const releases = [...app.releases].sort((left, right) => right.datetime.localeCompare(left.datetime));
+
+  document.title = `${app.name} Release History`;
+  headingApp.textContent = app.name;
+  eyebrowApp.textContent = app.name;
+  currentApp.replaceChildren();
+  const currentAppName = document.createElement("strong");
+  currentAppName.textContent = app.name;
+  currentApp.append(currentAppName, " is selected");
+  if (app.isLive === false) {
+    const availability = document.createElement("span");
+    availability.className = "availability";
+    availability.textContent = "Not Live";
+    currentApp.append(availability);
+  }
+  tableRegion.setAttribute("aria-label", `${app.name} release history table`);
+  releaseCaption.textContent = app.isLive === false
+    ? `${app.name} · Not Live`
+    : releases.length
+    ? `${releases.length} release${releases.length === 1 ? "" : "s"} · newest first`
+    : `${app.name} · no releases yet`;
+
+  releaseRows.replaceChildren();
+  if (releases.length) {
+    releases.forEach((release) => releaseRows.append(renderRelease(release, app)));
+  } else {
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+    cell.colSpan = 6;
+    cell.className = "empty-state";
+    cell.textContent = app.isLive === false
+      ? `${app.name} is not live yet. No release history is available.`
+      : `No release history has been added for ${app.name} yet.`;
+    row.append(cell);
+    releaseRows.append(row);
+  }
+
+  appNotes.replaceChildren();
+  app.notices.forEach((notice) => {
+    const paragraph = document.createElement("p");
+    paragraph.className = "note";
+    paragraph.innerHTML = notice;
+    appNotes.append(paragraph);
+  });
+
+  sourceFooter.replaceChildren();
+  if (app.source) {
+    sourceFooter.append("Source: ");
+    const link = document.createElement("a");
+    link.href = app.source.href;
+    link.textContent = app.source.label;
+    link.target = "_blank";
+    link.rel = "noopener";
+    sourceFooter.append(link);
+  } else if (app.isLive === false) {
+    sourceFooter.textContent = `${app.name} is not live yet.`;
+  } else {
+    sourceFooter.textContent = `Source history for ${app.name} has not been supplied yet.`;
+  }
+}
+
+appSelect.addEventListener("change", () => {
+  renderApp(appSelect.value);
+});
+
+window.addEventListener("pageshow", () => {
+  renderApp(appSelect.value);
+});
+
+renderApp(appSelect.value);
+</script>
+</body>
+</html>
+
+
+
+
+
